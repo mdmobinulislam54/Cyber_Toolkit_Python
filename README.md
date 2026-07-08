@@ -21,7 +21,7 @@ A simple Python tool that displays the service name and description of common ne
 ## Usage
 
 ```bash
-python port.py
+python3 port.py
 ```
 
 Example:
