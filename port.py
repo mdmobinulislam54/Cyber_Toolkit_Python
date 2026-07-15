@@ -1,70 +1,76 @@
-print("""
-==============================
-   PORT  NUMBER DETAILS
-==============================
-""")
+ports = {
+    # Web Services
+    80: "Service: Web | HTTP - Unencrypted web traffic",
+    443: "Service: Web | HTTPS - Encrypted web traffic",
+    8080: "Service: Web | HTTP Alternate - Development servers / Proxies",
+    8443: "Service: Web | HTTPS Alternate",
 
-port = int(input("Enter Port Number : "))
+    # Email Services
+    25: "Service: Email | SMTP - Sending emails",
+    110: "Service: Email | POP3 - Receiving emails",
+    143: "Service: Email | IMAP - Email synchronization",
+    465: "Service: Email | SMTPS - Secure SMTP",
+    587: "Service: Email | SMTP Submission",
+    993: "Service: Email | IMAPS - Secure IMAP",
+    995: "Service: Email | POP3S - Secure POP3",
 
-if port == 80:
-    print("Service : Web", "Description : HTTP (unencrypted web traffic)")
-elif port == 443:
-    print("Service : Web", "Description : HTTPS (encrypted web traffic)")
-elif port == 8080:
-    print("Service : Web", "Description : HTTP alternate (proxies/dev servers)")
+    # File Transfer
+    20: "Service: File Transfer | FTP Data",
+    21: "Service: File Transfer | FTP Control",
+    22: "Service: Remote Access | SSH / SFTP",
+    69: "Service: File Transfer | TFTP",
 
-elif port == 25:
-    print("Service : Email", "Description : SMTP (sending mail)")
-elif port == 110:
-    print("Service : Email", "Description : POP3 (retrieving mail)")
-elif port == 143:
-    print("Service : Email", "Description : IMAP (retrieving mail, syncs across devices)")
-elif port == 465 or port == 587:
-    print("Service : Email", "Description : SMTP over SSL/TLS")
-elif port == 993:
-    print("Service : Email", "Description : IMAPS")
-elif port == 995:
-    print("Service : Email", "Description : POP3S")
+    # Remote Access
+    23: "Service: Remote Access | Telnet",
+    3389: "Service: Remote Access | RDP (Remote Desktop)",
+    5900: "Service: Remote Access | VNC",
 
-elif port == 20 or port == 21:
-    print("Service : File Transfer", "Description : FTP (data/control)")
-elif port == 22:
-    print("Service : Remote Access / File Transfer", "Description : SSH / SFTP (secure remote access & file transfer)")
-elif port == 69:
-    print("Service : File Transfer", "Description : TFTP")
+    # DNS & Network
+    53: "Service: Network | DNS",
+    67: "Service: Network | DHCP Server",
+    68: "Service: Network | DHCP Client",
+    123: "Service: Network | NTP (Time Sync)",
+    161: "Service: Network | SNMP",
+    162: "Service: Network | SNMP Trap",
 
-elif port == 23:
-    print("Service : Remote Access", "Description : Telnet (unencrypted, largely deprecated)")
-elif port == 3389:
-    print("Service : Remote Access", "Description : RDP (Windows Remote Desktop)")
-elif port == 5900:
-    print("Service : Remote Access", "Description : VNC")
+    # Windows Services
+    135: "Service: Windows | RPC",
+    137: "Service: Windows | NetBIOS Name Service",
+    138: "Service: Windows | NetBIOS Datagram",
+    139: "Service: Windows | NetBIOS Session",
+    445: "Service: Windows | SMB File Sharing",
 
-elif port == 53:
-    print("Service : Naming", "Description : DNS")
+    # Databases
+    1433: "Service: Database | Microsoft SQL Server",
+    1521: "Service: Database | Oracle Database",
+    3306: "Service: Database | MySQL / MariaDB",
+    5432: "Service: Database | PostgreSQL",
+    6379: "Service: Database | Redis",
+    27017: "Service: Database | MongoDB",
 
-elif port == 67 or port == 68:
-    print("Service : Network Services", "Description : DHCP")
-elif port == 123:
-    print("Service : Network Services", "Description : NTP (time sync)")
-elif port == 161 or port == 162:
-    print("Service : Network Services", "Description : SNMP (network monitoring)")
+    # Directory Services
+    389: "Service: Directory | LDAP",
+    636: "Service: Directory | LDAPS",
 
-elif port == 1433:
-    print("Service : Database", "Description : Microsoft SQL Server")
-elif port == 1521:
-    print("Service : Database", "Description : Oracle DB")
-elif port == 3306:
-    print("Service : Database", "Description : MySQL / MariaDB")
-elif port == 5432:
-    print("Service : Database", "Description : PostgreSQL")
-elif port == 6379:
-    print("Service : Database", "Description : Redis")
-elif port == 27017:
-    print("Service : Database", "Description : MongoDB")
+    # Security
+    1812: "Service: Authentication | RADIUS",
+    1813: "Service: Accounting | RADIUS",
 
-elif port == 445:
-    print("Service : File Sharing", "Description : SMB (Windows file sharing)")
+    # VPN
+    500: "Service: VPN | ISAKMP / IKE",
+    1701: "Service: VPN | L2TP",
+    1723: "Service: VPN | PPTP",
 
+    # Miscellaneous
+    514: "Service: Logging | Syslog",
+    2049: "Service: Network File System | NFS",
+    5060: "Service: VoIP | SIP",
+    5061: "Service: VoIP | SIP over TLS"
+}
+print("\n========== PORT INFORMATION ==========")
+port = int(input("Enter Port Number: "))
+if port in ports:
+    print("Port Number :", port)
+    print(ports[port])
 else:
-    print("Your port number is not registered here")
+    print("\nPort is not registered in this database.")
