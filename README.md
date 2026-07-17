@@ -1,26 +1,21 @@
-# Python Port Lookup Tool
+# 🛡️ Cyber Toolkit (Python)
 
-A beginner-friendly cybersecurity project written in Python.
+A beginner-friendly cybersecurity toolkit written in Python.
 
 ## Features
-- Search common TCP/UDP ports
-- Displays service name and description
-- Uses Python dictionaries instead of long if-elif statements
-- Simple command-line interface
+
+- 🔎 Port Lookup
+- 🌐 Secure URL Checker
+- 📁 Executable File Checker
+- 🔑 Password Strength Checker
+- 📖 Menu-driven interface
+- 🧩 Modular code using functions
 
 ## Technologies
+
 - Python 3
 
-## Example
+## How to Run
 
-Enter Port Number: 443
-
-========== PORT INFORMATION ==========
-Port Number : 443
-Service: Web | HTTPS - Encrypted web traffic
-
-Md Mobinul Islam
-
-## License
-
-MIT License
+```bash
+python cyber_toolkit.py
