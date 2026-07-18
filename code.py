@@ -76,12 +76,13 @@ def pas_strength(pas):
         print("Password is weak.")
 while True:
     print("""
-    ===== Cyber Tool =====
+    ===== Cyber Tool ===== 
     1. Port Lookup
     2. Check URL
     3. Check File
     4. Password Strength
     5. Exit
+    ..................by mObInUl
     """)
     choice = int(input("Choose an option:"))
     if choice == 1 : 
