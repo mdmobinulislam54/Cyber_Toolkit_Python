@@ -92,7 +92,6 @@ while True:
     3. Check File
     4. Password Strength
     5. Exit
-    ..................by mObInUl
     """)
     choice = int(input("Choose an option:"))
     if choice == 1 : 
