@@ -18,4 +18,4 @@ A beginner-friendly cybersecurity toolkit written in Python.
 ## How to Run
 
 ```bash
-python cyber_toolkit.py
+python3 cyber_toolkit.py
